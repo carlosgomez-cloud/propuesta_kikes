@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeeves × Huevos Kikes — Compensación Estratégica en Especie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0E;--card:#141418;--card2:#17171C;--green:#00D68F;--gold:#C9A84C;--tx:#F5F5F7;--mu:#9C9CA6;--bd:#26262E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 20px 64px}
+h1,h2,h3{font-family:'Inter Tight',Inter,sans-serif;letter-spacing:-.02em}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+.top .jv{height:30px}
+.top .cl{width:64px;height:64px;border-radius:14px;object-fit:cover;box-shadow:0 0 0 1px var(--bd)}
+.pill{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--bd);background:var(--card);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--mu);margin-bottom:18px}
+.pill b{color:var(--tx);font-weight:600}
+.hero h1{font-size:clamp(30px,4.6vw,46px);line-height:1.12;max-width:760px;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.lead{color:var(--mu);max-width:680px;font-size:16px}
+.cards{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin:32px 0 8px}
+.cc{text-align:center;font-size:12px;color:var(--mu)}
+.cc-photo{background:#000;border:1px solid var(--bd);border-radius:14px;overflow:hidden;margin-bottom:8px}
+.cc-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.we{width:150px;height:195px}.co{width:220px;height:132px}.vi{width:220px;height:132px}
+section{margin-top:64px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+section h2{font-size:clamp(24px,3vw,32px);margin-bottom:10px}
+.sub{color:var(--mu);max-width:720px;margin-bottom:22px}
+.toggle{background:transparent;border:1px solid var(--bd);color:var(--tx);border-radius:999px;padding:8px 16px;font:500 14px Inter,sans-serif;cursor:pointer;margin-bottom:20px}
+.toggle:hover{border-color:var(--green)}
+.panel{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px;margin-bottom:22px}
+.panel h3{font-size:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+label{display:block;font-size:13px;color:var(--mu);margin-bottom:6px}
+input{width:100%;background:var(--card2);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;color:var(--tx);font:500 15px Inter,sans-serif}
+input:disabled{color:var(--gold);opacity:1}
+.hint{font-size:12px;color:var(--mu);margin-top:5px}
+.calc{font-size:13px;color:var(--mu);margin-top:12px}
+.note{font-size:12.5px;color:var(--mu);border-top:1px solid var(--bd);padding-top:14px;margin-top:6px}
+.res-h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin:8px 0 12px;font-weight:600}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:14px}
+.r{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px}
+.r .k{font-size:13px;color:var(--mu)}
+.r .v{font:700 24px 'Inter Tight',sans-serif;color:var(--green);margin-top:4px}
+.tot{background:linear-gradient(180deg,#17171C,#121215);border:1px solid #2f3a33}
+.tot .v{font-size:28px}
+.net{font-size:13px;color:var(--mu);margin-top:8px}
+.net b{color:var(--tx)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--bd);vertical-align:top;font-size:14px}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);font-weight:600}
+td:first-child{font-weight:600;width:20%}
+td:nth-child(2){color:var(--mu);width:36%}
+tr:last-child td{border-bottom:0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px}
+.box .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.box h3{font-size:19px;margin:6px 0 14px}
+.box ul{list-style:none}
+.box li{position:relative;padding-left:18px;margin-bottom:9px;font-size:14px;color:#d8d8de}
+.box li:before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--green)}
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--bd);font-size:14px;color:var(--mu)}
+footer b{color:var(--tx);display:block;font-size:16px}
+@media(max-width:600px){.we{width:120px;height:156px}.co,.vi{width:100%;max-width:300px;height:auto;aspect-ratio:1.67}td,th{padding:10px}table{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <img class="jv" src="jeeves-logo.png" alt="Jeeves">
+  <img class="cl" src="kikes-logo.jpg" alt="Huevos Kikes">
+</div>
+
+<div class="hero">
+  <div class="pill">Preparado para <b>Johanna y equipo</b> · Huevos Kikes</div>
+  <h1>Compensación estratégica <em>en especie</em> para 20 colaboradores, recargada automáticamente cada mes</h1>
+  <p class="lead">Jeeves convierte el programa de compensación estratégica de Kikes en recargas automáticas a tarjeta física Mastercard o virtual — educación, bienestar, salud, movilidad, alimentación y dotación, con control por categoría —, sin cobros por plástico, manejo, activación ni transacciones, sin retiros de efectivo y con trazabilidad completa por colaborador.</p>
+  <div class="cards">
+    <div class="cc"><div class="cc-photo we"><img src="jeeves-card-world-elite.png" alt="Tarjeta World Elite"></div>World Elite</div>
+    <div class="cc"><div class="cc-photo co"><img src="jeeves-card-corporate.png" alt="Tarjeta Corporativa"></div>Tarjeta Corporativa</div>
+    <div class="cc"><div class="cc-photo vi"><img src="jeeves-card-virtual.png" alt="Tarjeta Virtual"></div>Tarjeta Virtual</div>
+  </div>
+</div>
+
+<section>
+  <div class="eyebrow">Propuesta económica</div>
+  <h2>Calculadora · Plan Gold</h2>
+  <p class="sub">Escenario conversado: 20 posiciones y un consumo mensual aproximado de COP 15.000.000. Con el botón puedes ver y ajustar los supuestos. Todos los cálculos son anuales salvo que se indique lo contrario.</p>
+  <button class="toggle" id="tgl" type="button">⚙️ Ver cálculos y supuestos</button>
+
+  <div id="calcPanel" hidden>
+    <div class="panel">
+      <h3>💼 Plan de la Plataforma</h3>
+      <div class="grid">
+        <div><label>Plan de la Plataforma</label><input value="Gold" disabled></div>
+        <div><label>Valor Anual del Plan (USD)</label><input id="plan" type="number" value="4000"></div>
+        <div><label>TRM del día (COP/USD)</label><input id="trm" type="number" step="0.01" value="3148.02"><div class="hint">TRM oficial vigente — 28 de octubre de 2026</div></div>
+        <div><label>Costo Anual de la Plataforma (COP)</label><input id="costoOut" disabled><div class="hint">Valor Anual del Plan × TRM del día</div></div>
+        <div><label>Gasto mensual en tarjetas (COP)</label><input id="gasto" type="number" value="15000000"><div class="hint">Consumo mensual estimado de las 20 posiciones</div></div>
+        <div><label>🎁 Cashback 1% · primeros 6 meses</label><input id="cbOut" disabled></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>💳 Ahorro por Automatización Recarga de Tarjetas</h3>
+      <div class="grid">
+        <div><label>Salario mensual operativo (COP)</label><input id="sal" type="number" value="3500000"></div>
+        <div><label>Tarjetas recargadas al mes</label><input id="tarj" type="number" value="20"></div>
+        <div><label>Minutos por recarga (captura manual)</label><input id="mins" type="number" value="8"></div>
+        <div><label>Horas trabajadas al mes</label><input id="horas" type="number" value="160"></div>
+      </div>
+      <div class="calc" id="recCalc"></div>
+    </div>
+    <p class="note">Supuestos ajustables: la población de 20 colaboradores y el consumo mensual de COP 15.000.000 son el escenario de referencia conversado con Johanna, sujeto a lo que Kikes defina en su pacto colectivo. El salario mensual operativo, los minutos por recarga y las horas trabajadas son estimaciones de referencia que deben confirmarse. El cashback del 1% aplica únicamente durante los primeros 6 meses del contrato y se devuelve a Kikes. El tratamiento tributario de los pagos en especie (porcentaje del salario, límites y conceptos habilitados) debe validarse con el área tributaria de Kikes. Los ahorros mostrados reflejan exclusivamente lo cuantificable dentro de esta calculadora; no incluyen el principal beneficio del programa: la reducción de la retención en la fuente de cada colaborador sobre el valor llevado a compensación en especie, ni el valor de evitar cargas prestacionales y parafiscales frente a entregar ese valor vía nómina.</p>
+  </div>
+
+  <div class="res-h">Ahorros por rubro · Anual</div>
+  <div class="res">
+    <div class="r"><div class="k">🎁 Cashback (primeros 6 meses)</div><div class="v" id="cb">—</div></div>
+    <div class="r"><div class="k">💳 Automatización Recarga de Tarjetas</div><div class="v" id="rec">—</div></div>
+  </div>
+  <div class="res">
+    <div class="r tot"><div class="k">Ahorro Total · Primer Año</div><div class="v" id="t1">—</div><div class="net" id="n1"></div></div>
+    <div class="r tot"><div class="k">Ahorro Total · A partir del segundo año</div><div class="v" id="t2">—</div><div class="net" id="n2"></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Diagnóstico</div>
+  <h2>Lo que necesita el programa de Kikes y cómo lo resuelve Jeeves</h2>
+  <table>
+    <tr><th>Tema</th><th>Hoy</th><th>Con Jeeves</th></tr>
+    <tr><td>Alivio tributario mes a mes</td><td>El plan institucional con Skandia se compensa una vez al año y solo para niveles de director en adelante.</td><td>Hasta el 50% del salario llevado a pagos en especie, con el beneficio reflejado en cada nómina mensual y sin modificar la base salarial.</td></tr>
+    <tr><td>Destinación por concepto</td><td>Garantizar que lo pactado se consuma en los beneficios definidos en el pacto colectivo.</td><td>Tarjetas por beneficio o bloqueo de categorías (ej. dotación solo en vestuario y calzado), sin retiros de efectivo y con trazabilidad completa para RR. HH. y ante la DIAN.</td></tr>
+    <tr><td>Recarga mensual</td><td>Las tarjetas débito prepago exigen cargas manuales o por archivo cada mes.</td><td>La tarjeta se crea una única vez con el monto mensual y se renueva sola; solo se interviene si cambia el porcentaje de un colaborador.</td></tr>
+    <tr><td>Flujo de caja</td><td>El prepago usa la caja de la compañía antes del consumo.</td><td>Kikes paga después del consumo, con el extracto, hasta 37 días sin intereses.</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Resumen</div>
+  <h2>Lo que incluye la propuesta para Kikes</h2>
+  <div class="two">
+    <div class="box">
+      <div class="tag">Plataforma</div>
+      <h3>Plan Gold · USD 4.000 anual</h3>
+      <ul>
+        <li>Plataforma 100% autogestionable: Kikes crea, recarga y bloquea las tarjetas desde un solo panel.</li>
+        <li>Cupos configurables por colaborador y por tipo de beneficio.</li>
+        <li>Sin cobros por plástico, cuota de manejo, seguros, activación ni transacciones: un único fee anual.</li>
+        <li>Reportería y trazabilidad en tiempo real de cada consumo.</li>
+        <li>Mismo ecosistema disponible para viáticos, pagos a proveedores y pagos al exterior cuando Kikes lo quiera escalar.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="tag">Programa</div>
+      <h3>Compensación Estratégica · Recarga de Tarjetas</h3>
+      <ul>
+        <li>Tarjeta física Mastercard + tarjeta virtual (Apple Pay / Google Wallet) para cada una de las 20 posiciones.</li>
+        <li>Recarga automática mensual, alineada con el calendario de nómina de Kikes.</li>
+        <li>Conceptos configurables: educación, bienestar, salud, movilidad, alimentación y dotación.</li>
+        <li>App para el colaborador con saldo, movimientos y bloqueo inmediato en caso de pérdida.</li>
+        <li>Cashback del 1% sobre lo transaccionado durante los primeros 6 meses, a favor de Kikes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>Carlos Gómez</b>
+  Senior Enterprise AE Colombia · Jeeves<br>
+  carlos.gomez@tryjeeves.com · +57 316 480 1023
+</footer>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const f=n=>'$'+Math.round(n).toLocaleString('es-CO')+' COP';
+const num=id=>parseFloat($(id).value)||0;
+function calc(){
+  const plan=num('plan'),trm=num('trm'),gasto=num('gasto');
+  const costo=plan*trm;
+  const cb=gasto*6*0.01;
+  const costoHora=num('horas')?num('sal')/num('horas'):0;
+  const horasMes=num('tarj')*(num('mins')/60);
+  const rec=horasMes*costoHora*12;
+  const t1=cb+rec,t2=rec;
+  $('costoOut').value=f(costo);
+  $('cbOut').value=f(cb);
+  $('recCalc').textContent='= '+horasMes.toFixed(1).replace('.',',')+' h/mes de captura manual evitadas × '+f(costoHora).replace(' COP','')+' COP/hora × 12 meses';
+  $('cb').textContent=f(cb);
+  $('rec').textContent=f(rec);
+  $('t1').textContent=f(t1);
+  $('t2').textContent=f(t2);
+  const usd='USD $'+plan.toLocaleString('en-US');
+  $('n1').innerHTML='Menos costo de plataforma ('+f(costo)+' / '+usd+') = <b>'+f(t1-costo)+' neto</b>';
+  $('n2').innerHTML='Menos costo de plataforma ('+f(costo)+' / '+usd+') = <b>'+f(t2-costo)+' neto</b>';
+}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc));
+$('tgl').addEventListener('click',()=>{const p=$('calcPanel');p.hidden=!p.hidden;$('tgl').textContent=p.hidden?'⚙️ Ver cálculos y supuestos':'⚙️ Ocultar cálculos y supuestos';});
+calc();
+</script>
+</body>
+</html>
