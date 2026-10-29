@@ -141,7 +141,6 @@ body.locked #accessGate{display:flex}
   </div>
   <div class="res">
     <div class="r tot"><div class="k">Ahorro Total · Primer Año</div><div class="v" id="t1">—</div><div class="net" id="n1"></div></div>
-    <div class="r tot"><div class="k">Ahorro Total · A partir del segundo año</div><div class="v" id="t2">—</div><div class="net" id="n2"></div></div>
   </div>
 </section>
 
@@ -204,17 +203,15 @@ function calc(){
   const costoHora=num('horas')?num('sal')/num('horas'):0;
   const horasMes=num('tarj')*(num('mins')/60);
   const rec=horasMes*costoHora*12;
-  const t1=cb+rec,t2=rec;
+  const t1=cb+rec;
   $('costoOut').value=f(costo);
   $('cbOut').value=f(cb);
   $('recCalc').textContent='= '+horasMes.toFixed(1).replace('.',',')+' h/mes de captura manual evitadas × '+f(costoHora).replace(' COP','')+' COP/hora × 12 meses';
   $('cb').textContent=f(cb);
   $('rec').textContent=f(rec);
   $('t1').textContent=f(t1);
-  $('t2').textContent=f(t2);
   const usd='USD $'+plan.toLocaleString('en-US');
   $('n1').innerHTML='Menos costo de plataforma ('+f(costo)+' / '+usd+') = <b>'+f(t1-costo)+' neto</b>';
-  $('n2').innerHTML='Menos costo de plataforma ('+f(costo)+' / '+usd+') = <b>'+f(t2-costo)+' neto</b>';
 }
 document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc));
 $('tgl').addEventListener('click',()=>{const p=$('calcPanel');p.hidden=!p.hidden;$('tgl').textContent=p.hidden?'⚙️ Ver cálculos y supuestos':'⚙️ Ocultar cálculos y supuestos';});
