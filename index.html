@@ -65,9 +65,26 @@ tr:last-child td{border-bottom:0}
 footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--bd);font-size:14px;color:var(--mu)}
 footer b{color:var(--tx);display:block;font-size:16px}
 @media(max-width:600px){.we{width:120px;height:156px}.co,.vi{width:100%;max-width:300px;height:auto;aspect-ratio:1.67}td,th{padding:10px}table{font-size:13px}}
+body.locked .wrap{display:none}
+#accessGate{display:none;position:fixed;inset:0;align-items:center;justify-content:center;background:var(--bg);padding:20px;z-index:10}
+body.locked #accessGate{display:flex}
+.gate{width:100%;max-width:360px;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:28px;text-align:center}
+.gate img{height:28px;margin-bottom:18px}
+.gate h2{font-size:20px;margin-bottom:6px}
+.gate p{font-size:14px;color:var(--mu);margin-bottom:16px}
+.gate button{width:100%;margin-top:12px;background:var(--green);color:#0B0B0E;border:0;border-radius:10px;padding:11px;font:600 15px Inter,sans-serif;cursor:pointer}
+.gate .err{color:#ff6b6b;font-size:13px;margin-top:10px;min-height:18px}
 </style>
 </head>
-<body>
+<body class="locked">
+<div id="accessGate"><form class="gate" id="gateForm">
+  <img src="jeeves-logo.png" alt="Jeeves">
+  <h2>Propuesta privada</h2>
+  <p>Ingresa la clave que te compartimos por correo para ver tu propuesta.</p>
+  <input id="gatePw" type="password" autocomplete="off" placeholder="Clave" aria-label="Clave">
+  <button type="submit">Entrar</button>
+  <div class="err" id="gateErr"></div>
+</form></div>
 <div class="wrap">
 
 <div class="top">
@@ -202,6 +219,18 @@ function calc(){
 document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc));
 $('tgl').addEventListener('click',()=>{const p=$('calcPanel');p.hidden=!p.hidden;$('tgl').textContent=p.hidden?'⚙️ Ver cálculos y supuestos':'⚙️ Ocultar cálculos y supuestos';});
 calc();
+</script>
+<script>
+(function(){
+  const H='c200171d2bcaa999f1f8dcbb1ba62a71e18ccbd46097f91240ffff5952071cfd',K='jv_kikes_ok';
+  const open=()=>document.body.classList.remove('locked');
+  try{if(sessionStorage.getItem(K)===H)open();}catch(e){}
+  async function sha(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+  document.getElementById('gateForm').addEventListener('submit',async e=>{e.preventDefault();
+    const h=await sha(document.getElementById('gatePw').value.trim());
+    if(h===H){try{sessionStorage.setItem(K,H);}catch(e){} open();}
+    else document.getElementById('gateErr').textContent='Clave incorrecta. Revisa el correo de Carlos.';});
+})();
 </script>
 </body>
 </html>
